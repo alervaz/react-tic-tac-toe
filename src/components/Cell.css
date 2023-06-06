@@ -1,0 +1,93 @@
+.cell {
+    aspect-ratio: 1/1;
+    width: max(11vw, 6rem);
+    background-color: var(--cards-bg);
+    box-shadow: var(--shadow);
+    border-radius: 0.7rem;
+    animation: Enter 300ms ease-in;
+    display: grid;
+    place-items: center;
+    --blink-color: white;
+}
+
+.has-value {
+    animation: Flip 300ms ease-in-out forwards;
+    
+}
+
+.icon {
+    font-size: 5rem;
+}
+
+.r {
+    fill: hotpink;
+}
+
+.player-1 {
+    --blink-color: red;
+}
+
+.player-2 {
+    --blink-color: blue;
+}
+
+.winning {
+    animation: Blink infinite forwards 700ms;
+}
+
+.winning .o {
+    fill: var(--blink-color);
+}
+
+.circle {
+    display: grid;
+    place-items: center;
+}
+
+.b {
+    fill: #00C4FF;
+}
+
+.o {
+    fill: #202020;
+    font-size: 3rem;
+    position: absolute;
+    z-index: 2;
+}
+
+img {
+    width: 70%;
+}
+
+
+@keyframes Enter {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes Flip {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes Blink {
+    from {
+        background-color: #202020;
+    }
+
+    to {
+        background-color: var(--blink-color);
+    }
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+main {
+  --text: white;
+  --bg-r: linear-gradient(45deg, hotpink, #00C4FF);
+  --bg-b: linear-gradient(45deg, limegreen, #00C4FF);
+  --shadow: 0.2rem 0.2rem 25px black;
+  --cards-bg: #202020;
+  
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+
+
+.red {
+  background: var(--bg-r);
+}
+
+.blue {
+  background: var(--bg-b);
+}
+
+*,
+*::after,
+*::before {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
